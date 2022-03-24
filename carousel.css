@@ -1,4 +1,7 @@
-
+/* container-3D, ::after, ::before {
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+} */
 
 .container-3D {
   position: relative;

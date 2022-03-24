@@ -2,12 +2,7 @@ html,body{
     font-family: 'Open Sans',sans-serif;
     margin: 0;
     padding: 0;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
     font-size: 12pt;
-    line-height: 18pt;
     font-weight: 400;
     color: white;
 }
@@ -19,10 +14,65 @@ body {
   justify-content: center;
 }
 
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 
-*, ::after, ::before {
-    box-sizing: border-box;
-    transform-style: preserve-3d;
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
 }
 
 p{
@@ -108,15 +158,13 @@ header{
     border: none;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    margin-bottom: 2.5%;
     background-color: #3b4fe4;
     /* background-image: url("./assets/img/hero1.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 750px;
+    min-height: 400px;
     color: whitesmoke;
-    padding-left: 10%;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 #hero img{
@@ -126,9 +174,39 @@ header{
 }
 
 .hero-text{
-    padding-left: 10px%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 10px;
+    padding-bottom: 10%;
+    font-size: 150%;
 }
+
+/*------ LATEST -----*/
+#latest{
+    padding-top: 5%;
+    width: 100%;
+    padding-bottom: 1%;
+    color: #3b4fe4;
+}
+
+.latest-projects{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 3%;
+    color: #3b4fe4;
+}
+
+.cards-container-outer{
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+
+}
+
+/*------ CAROUSEL -----*/
 
 #build{
     padding-top: 5%;
@@ -136,29 +214,17 @@ header{
     padding-bottom: 5%;
 }
 
-/*------ CAROUSEL -----*/
-
-.carousel-container{
-    padding-left: 10%;
-    width: 50%;
-    margin: auto;
-    display: inline-block;
-}
-
-
 /*------ REVIEW -----*/
 
 .review{
-    width: 40%;
+    width: 90%;
     margin: auto;
     display: inline-block;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
 }
 
-#latest{
-    padding-top: 5%;
-    width: 100%;
-    padding-bottom: 5%;
-}
 /* ---------------------------------------------------------------- 
 ----------------------------- FOOTER ------------------------------
 -------------------------------------------------------------------*/

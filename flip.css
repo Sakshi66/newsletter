@@ -1,0 +1,106 @@
+.cards-container-inner1{
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  transform: rotate(6deg);
+}
+
+.card-main{
+  color: whitesmoke;
+}
+
+.cards-container-inner2{
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  transform: rotate(-2deg);
+}
+
+.cards-container-inner3{
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  transform: rotate(4deg);
+}
+
+.wrap {
+  padding: 0;
+  margin: auto;
+  position: relative;
+  perspective: 1000px;
+  background-color: transparent;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0, 0.9, 0.9, 0);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation-duration: 4s;
+  transform: rotateY(-90deg);
+}
+.card:nth-child(1) {
+  background-color: #7583EC;
+}
+.card:nth-child(2) {
+  background-color: #9CA6F1;
+}
+.card:nth-child(3) {
+  background-color: #C4CAF6;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0s;
+  animation-name: rotate;
+}
+.card:nth-child(2) {
+  animation-delay: 2s;
+  animation-name: rotate;
+}
+.card:nth-child(3) {
+  animation-delay: 4s;
+  animation-name: rotate;
+}
+@-moz-keyframes rotate {
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+@-webkit-keyframes rotate {
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+@-o-keyframes rotate {
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+@keyframes rotate {
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}

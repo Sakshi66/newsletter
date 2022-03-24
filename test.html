@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+
+    <link type="text/css" rel="stylesheet" href="flip.css">
+
+    <style>
+      .wrap {
+  width: 100%;
+  height: 100%;
+
+  padding: 100px 0;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/7f/24/50/7f2450820b91a1ca28e05cf6ccb48da3.jpg);
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1;
+  grid-row-gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#para {
+  width: 100%;
+  height: 800px;
+}
+
+/* flip card */
+
+.flipCard {
+  perspective: 1000px;
+  cursor: pointer;
+  justify-self: center;
+  align-self: center;
+}
+
+.cardFace{
+  position: relative;
+  transition: all .7s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.cardFace.over, .front, .back {
+  transform: rotateY(180deg);
+}
+
+.flipCard, .front, .back {
+  width: 350px;
+  height: 350px;
+  
+}
+
+.cardFace {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all .7s ease-in-out;
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.front{
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+#flip-A {
+  transform: rotate(6deg);
+}
+
+#front-A {
+  background-color: rgb(36, 40, 51);
+}
+
+#back-A {
+  background-color: rgb(171, 181, 17);
+  box-shadow: 8px 8px 6px 2px rgba(36, 40, 51, .75);
+}
+
+#flip-B {
+  transform: rotate(-2deg);
+}
+
+#front-B {
+  background-color: rgb(221, 215, 192);
+}
+
+#front-B img {
+  padding: 15% 0;
+}
+
+#back-B {
+  background-color: rgb(157,157, 157);
+  box-shadow: 8px 8px 6px 2px rgba(36, 40, 51, .75);
+}
+
+
+.cardInfo {
+  padding: 10%;
+}
+
+.cardInfo img {
+  display: block;
+  margin: 15% auto;
+
+}
+    </style>
+  </head>
+  <body>
+   <div class="wrap">
+  
+<span style="display: block; color: #ffffff; font-size: 5em; text-align: center; margin: 75px auto;">FLIP CARDS</span>
+
+  <div class="container">
+  
+  <div class="flipCard" id="flip-A">
+    <div class="cardFace">
+    <div class="front" id="front-A">
+      <div class="cardInfo">
+      <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/65218-200.png"/>
+      </div>
+    </div>
+    <div class="back" id="back-A">
+      <div class="cardInfo">
+        <h3>DIY Pickled Mustache</h3>
+        <p>XOXO pabst man bun enamel pin pok pok cray sriracha swag YOLO la croix before they sold out irony. Tousled taxidermy beard iPhone  schlitz, waistcoat portland hammock brooklyn art party. Four dollar  toast hell of intelligentsia enamel pin, meditation venmo offal retro  occupy twee poke portland chambray hexagon yuccie.</p>
+      </div>
+    </div>
+    </div>  
+  </div>
+  
+<div class="flipCard" id="flip-B">
+    <div class="cardFace">
+    <div class="front" id="front-B">
+      <div class="cardInfo">
+      <img src="https://image.flaticon.com/icons/png/128/158/158502.png"/>
+      </div>
+    </div>
+    <div class="back" id="back-B">
+      <div class="cardInfo">
+        <h3>Occupy Pabst</h3>
+        <p>XOXO pabst man bun enamel pin pok pok cray sriracha swag YOLO la croix before they sold out irony. Tousled taxidermy beard iPhone  schlitz, waistcoat portland hammock brooklyn art party. Four dollar  toast hell of intelligentsia enamel pin, meditation venmo offal retro  occupy twee poke portland chambray hexagon yuccie.</p>
+      </div>
+    </div>
+    </div>  
+  </div>    
+    
+</div>
+</div>
+ <div id="para"></div>
+  </body>
+</html>
